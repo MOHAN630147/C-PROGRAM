@@ -1,29 +1,28 @@
 /*SUM AND AVG OF THE ARRAY IN MATRIX*/
-#include <stdio.h>
-
-int main() {
-    int arr[N];
-
-    int n;
-    // Inputting the size of the array
-    printf("Enter the size of the array: ");
-    scanf("%d", &n);
-
-    // Inputting the array
-    printf("Enter an array: ");
-    for(int i = 0; i< n; i++)
-	{
-        scanf("%d", &arr[i]);
-    }
-
-    // Printing the reverse of the array
-    printf("Reversed array: ");
-    for (int i = n-1; i>=0; i--){
-        printf("%d ", arr[i]);
-    }
-
-    return 0;
+#include<stdio.h>
+int main()
+{
+ int i,j,m,n;
+ float a[10][10], sum=0.0, avg;
+ printf("Enter row and column size:\n");
+ scanf("%d%d", &m, &n);
+ printf("Enter matrix elements:\n");
+ for(i=0;i< m;i++)
+ {
+  for(j=0;j< n;j++)
+  {
+   printf("a[%d][%d]=",i,j);
+   scanf("%f", &a[i][j]);
+  }
+ }
+for(i=0;i< m;i++)
+ {
+  for(j=0;j< n;j++)
+  {
+   sum = sum + a[i][j];
+  }
+ }
+ avg = sum/(m*n);
+ printf("Sum = %f\n", sum);
+ printf("Average = %f", avg);
 }
-
-// reverse array in c
-// reverse an array in c
