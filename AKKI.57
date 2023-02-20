@@ -1,0 +1,27 @@
+/*c program to convert the decimal number tinto yhe binary numbr using the function*/
+#include<stdio.h>
+long int decimalToBinary(long int n);
+int main()
+{
+	 long int decimal, binary;
+	 printf("Enter decimal number: ");
+	 scanf("%ld", &decimal);
+     /* Function Call */
+     binary = decimalToBinary(decimal);
+	 printf("Decimal (%ld) = Binary (%ld)", decimal, binary);
+	 return(0);
+}
+long int decimalToBinary(long int n)
+{
+    long int binary=0, rem, num, base=1;
+    num = n;
+    while(num !=0 )
+	 {
+	  rem = num%2;
+	  binary = binary + base * rem;
+	  base = base*10;
+	  num = num/2;
+	 }
+
+    return binary;
+}
